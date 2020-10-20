@@ -1,0 +1,45 @@
+body { font: 14px "Century Gothic", Futura, sans-serif; margin: 20px; }
+ol, ul { padding-left: 30px; }
+
+.board-row:after { clear: both; content: ""; display: table; }
+
+.status{ margin-bottom: 10px; }
+
+.square{ background: #fff; border: 1px solid #999; float: left; height: 34px; margin-right: -1px; margin-top: -1px; width: 34px; position: relative; }
+
+.board-row:nth-child(even) .square:nth-child(odd), .board-row:nth-child(odd) .square:nth-child(even){ background: #eee; }
+
+.piece{ position: absolute; width: 50%; height: 50%; margin-top: 50%; background-color: black; border-radius: 50%; }
+
+.piece.dama{ border: 5px solid gray; }
+
+.enemy{ background-color: #F7CE02; }
+
+.flex{ display: flex; align-items: center; justify-content: center; }
+
+.square:focus{ outline: none; }
+.square.move{ background: orange; }
+.square.force{ background: darkred; }
+.square.active{ border: 3px solid orange; margin-top: -3px; margin-bottom: -3px; z-index: 1; }
+
+.kbd-navigation .square:focus{ background: #ddd; }
+
+.game{ display: flex; flex-direction: column; width: 40%; margin: 0 auto; position: relative; }
+
+.game-info img{ float: right; cursor: pointer; }
+.game-info > div{ line-height: 32px; }
+.game-info button{ width: 45%; padding: 5px; border: 1px solid #ccc; margin: 10px 0px; }
+.game-info button:nth-of-type(1){ float: left; }
+.game-info button:nth-of-type(2){ float: right; }
+
+
+.game-settings{ position: absolute; background-color: rgba(0,0,0,0.8); z-index: 2; width: 100%; height: 100%; color: white; font-size: 16px; }
+.game-settings img{ color: white; background: white; border-radius: 50%; padding: 5px; margin: 5px; float: right; cursor: pointer; }
+.game-settings input{ margin-left: 10px; }
+
+.mt-20{ margin-top: 20px; }
+.p-30{ padding: 30px; }
+
+@media (max-width: 1600px){ .game{ width: 50%; } } 
+@media (max-width: 1200px){ .game{ width: 60%; } } 
+@media (max-width: 992px){ .game{ width: 100%; } }
